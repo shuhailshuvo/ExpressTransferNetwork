@@ -5,7 +5,9 @@ import classNames from "classnames";
 import withStyles from "@material-ui/core/styles/withStyles";
 
 // @material-ui/icons
-
+import {
+  Tooltip
+} from "@material-ui/core";
 // core components
 import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
@@ -16,9 +18,10 @@ import CardFooter from "components/Card/CardFooter.jsx";
 
 import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.jsx";
 
-import team1 from "assets/img/faces/avatar.jpg";
-import team2 from "assets/img/faces/christian.jpg";
-import team3 from "assets/img/faces/kendall.jpg";
+import car1 from "assets/img/cars/1.png";
+import car2 from "assets/img/cars/2.png";
+import car3 from "assets/img/cars/3.png";
+import car4 from "assets/img/cars/4.png";
 
 class TeamSection extends React.Component {
   render() {
@@ -30,128 +33,207 @@ class TeamSection extends React.Component {
     );
     return (
       <div className={classes.section}>
-        <h2 className={classes.title}>Here is our team</h2>
+        <h2 className={classes.title}>Available Car Types</h2>
         <div>
           <GridContainer>
             <GridItem xs={12} sm={12} md={4}>
               <Card plain>
                 <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                  <img src={team1} alt="..." className={imageClasses} />
+                  <img src={car1} alt="..." className={imageClasses} />
                 </GridItem>
                 <h4 className={classes.cardTitle}>
-                  Gigi Hadid
+                  Family 
                   <br />
-                  <small className={classes.smallTitle}>Model</small>
+                  <small className={classes.smallTitle}>Collection</small>
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
-                    You can write here details about one of your team members.
-                    You can give more details about what they do. Feel free to
-                    add some <a href="#pablo">links</a> for people to be able to
-                    follow them outside the site.
+                  Meet the roomy Family Collection. Cars to keep everyone happy.
                   </p>
                 </CardBody>
                 <CardFooter className={classes.justifyCenter}>
+                <Tooltip
+                    id="instagram-twitter"
+                    title="Max passenger 3 - 5"
+                    placement={
+                      window.innerWidth > 959 ? "top" : "left"
+                    }
+                    className="popper"
+                  >
                   <Button
-                    justIcon
+                    // justIcon
                     color="transparent"
                     className={classes.margin5}
                   >
-                    <i className={classes.socials + " fab fa-twitter"} />
+                    <i className={classes.socials + " fas fa-users"}/>
+                  3-5
                   </Button>
+                  </Tooltip>
+                  <Tooltip
+                    id="instagram-twitter"
+                    title="Max Luggage 1 - 3"
+                    placement={
+                      window.innerWidth > 959 ? "top" : "left"
+                    }
+                    className="popper"
+                  >
                   <Button
-                    justIcon
+                    // justIcon
                     color="transparent"
                     className={classes.margin5}
                   >
-                    <i className={classes.socials + " fab fa-instagram"} />
-                  </Button>
+                    <i className={classes.socials + " fas fa-suitcase"}></i> 1 - 3
+                  </Button></Tooltip>
+                  <Tooltip
+                    id="instagram-twitter"
+                    title="Automatic Transmission"
+                    placement={
+                      window.innerWidth > 959 ? "top" : "left"
+                    }
+                    className="popper"
+                  >
                   <Button
-                    justIcon
+                    // justIcon
                     color="transparent"
                     className={classes.margin5}
                   >
-                    <i className={classes.socials + " fab fa-facebook"} />
+                     <i className={classes.socials + " fas fa-car"}></i> Auto
                   </Button>
+                  </Tooltip>
                 </CardFooter>
               </Card>
             </GridItem>
             <GridItem xs={12} sm={12} md={4}>
               <Card plain>
                 <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                  <img src={team2} alt="..." className={imageClasses} />
+                  <img src={car2} alt="..." className={imageClasses} />
                 </GridItem>
                 <h4 className={classes.cardTitle}>
-                  Christian Louboutin
+                  Adrenaline
                   <br />
-                  <small className={classes.smallTitle}>Designer</small>
+                  <small className={classes.smallTitle}>Collection</small>
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
-                    You can write here details about one of your team members.
-                    You can give more details about what they do. Feel free to
-                    add some <a href="#pablo">links</a> for people to be able to
-                    follow them outside the site.
+                  Say hello to our playful Adrenaline Collection. Cars to put a smile on your face.
                   </p>
                 </CardBody>
                 <CardFooter className={classes.justifyCenter}>
+                <Tooltip
+                    id="instagram-twitter"
+                    title="Max passenger 3 - 5"
+                    placement={
+                      window.innerWidth > 959 ? "top" : "left"
+                    }
+                    className="popper"
+                  >
                   <Button
-                    justIcon
+                    // justIcon
                     color="transparent"
                     className={classes.margin5}
                   >
-                    <i className={classes.socials + " fab fa-twitter"} />
+                    <i className={classes.socials + " fas fa-users"}/>
+                  3-5
                   </Button>
+                  </Tooltip>
+                  <Tooltip
+                    id="instagram-twitter"
+                    title="Max Luggage 1 - 3"
+                    placement={
+                      window.innerWidth > 959 ? "top" : "left"
+                    }
+                    className="popper"
+                  >
                   <Button
-                    justIcon
+                    // justIcon
                     color="transparent"
                     className={classes.margin5}
                   >
-                    <i className={classes.socials + " fab fa-linkedin"} />
+                    <i className={classes.socials + " fas fa-suitcase"}></i> 1 - 3
+                  </Button></Tooltip>
+                  <Tooltip
+                    id="instagram-twitter"
+                    title="Automatic Transmission"
+                    placement={
+                      window.innerWidth > 959 ? "top" : "left"
+                    }
+                    className="popper"
+                  >
+                  <Button
+                    // justIcon
+                    color="transparent"
+                    className={classes.margin5}
+                  >
+                     <i className={classes.socials + " fas fa-car"}></i> Auto
                   </Button>
+                  </Tooltip>
                 </CardFooter>
               </Card>
             </GridItem>
             <GridItem xs={12} sm={12} md={4}>
               <Card plain>
                 <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                  <img src={team3} alt="..." className={imageClasses} />
+                  <img src={car3} alt="..." className={imageClasses} />
                 </GridItem>
                 <h4 className={classes.cardTitle}>
-                  Kendall Jenner
+                Prestige
                   <br />
-                  <small className={classes.smallTitle}>Model</small>
+                  <small className={classes.smallTitle}>Collection</small>
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
-                    You can write here details about one of your team members.
-                    You can give more details about what they do. Feel free to
-                    add some <a href="#pablo">links</a> for people to be able to
-                    follow them outside the site.
+                  For unrivalled luxury, choose the Prestige Collection and enjoy 20% off the base rate*.
                   </p>
                 </CardBody>
                 <CardFooter className={classes.justifyCenter}>
+                <Tooltip
+                    id="instagram-twitter"
+                    title="Max passenger 3 - 5"
+                    placement={
+                      window.innerWidth > 959 ? "top" : "left"
+                    }
+                    className="popper"
+                  >
                   <Button
-                    justIcon
+                    // justIcon
                     color="transparent"
                     className={classes.margin5}
                   >
-                    <i className={classes.socials + " fab fa-twitter"} />
+                    <i className={classes.socials + " fas fa-users"}/>
+                  3-5
                   </Button>
+                  </Tooltip>
+                  <Tooltip
+                    id="instagram-twitter"
+                    title="Max Luggage 1 - 3"
+                    placement={
+                      window.innerWidth > 959 ? "top" : "left"
+                    }
+                    className="popper"
+                  >
                   <Button
-                    justIcon
+                    // justIcon
                     color="transparent"
                     className={classes.margin5}
                   >
-                    <i className={classes.socials + " fab fa-instagram"} />
-                  </Button>
+                    <i className={classes.socials + " fas fa-suitcase"}></i> 1 - 3
+                  </Button></Tooltip>
+                  <Tooltip
+                    id="instagram-twitter"
+                    title="Automatic Transmission"
+                    placement={
+                      window.innerWidth > 959 ? "top" : "left"
+                    }
+                    className="popper"
+                  >
                   <Button
-                    justIcon
+                    // justIcon
                     color="transparent"
                     className={classes.margin5}
                   >
-                    <i className={classes.socials + " fab fa-facebook"} />
+                     <i className={classes.socials + " fas fa-car"}></i> Auto
                   </Button>
+                  </Tooltip>
                 </CardFooter>
               </Card>
             </GridItem>
