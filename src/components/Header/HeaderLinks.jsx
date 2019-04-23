@@ -23,20 +23,16 @@ function HeaderLinks({ ...props }) {
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
-      <Tooltip
+        <Tooltip
           id="instagram-twitter"
           title="Car Types"
           placement={window.innerWidth > 959 ? "top" : "left"}
           classes={{ tooltip: classes.tooltip }}
         >
-        <Button
-          href="https://www.creative-tim.com/product/material-kit-react"
-          color="transparent"
-          target="_blank"
-          className={classes.navLink}
-        >
-          <i className="fas fa-car" /> Cars
-        </Button></Tooltip>
+          <Button href="/cars" color="transparent" className={classes.navLink}>
+            <i className="fas fa-car" /> Cars
+          </Button>
+        </Tooltip>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Tooltip
@@ -46,8 +42,7 @@ function HeaderLinks({ ...props }) {
           classes={{ tooltip: classes.tooltip }}
         >
           <Button
-            href="https://twitter.com/CreativeTim"
-            target="_blank"
+            href="/pricing"
             color="transparent"
             className={classes.navLink}
           >
@@ -64,8 +59,7 @@ function HeaderLinks({ ...props }) {
         >
           <Button
             color="transparent"
-            href="https://www.facebook.com/CreativeTim"
-            target="_blank"
+            href="/signup"
             className={classes.navLink}
           >
             <i className=" fas fa-user-plus" /> SignUp
@@ -81,8 +75,7 @@ function HeaderLinks({ ...props }) {
         >
           <Button
             color="transparent"
-            href="https://www.instagram.com/CreativeTimOfficial"
-            target="_blank"
+            href="/signin"
             className={classes.navLink}
           >
             <i className=" fas fa-sign-in-alt" /> SignIn
