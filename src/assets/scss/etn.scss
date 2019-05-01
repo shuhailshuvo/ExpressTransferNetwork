@@ -11,9 +11,17 @@
 @import "plugins/plugin-react-datetime";
 @import "plugins/plugin-react-slick";
 
-.text-center{
-    text-align: center;
-    align-content: center;
-    align-items: center;
-    margin: 0% auto;
+.text-center {
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  margin: 0% auto;
+}
+.mt-10 {
+  margin-top: 10px;
+}
+
+.highlight {
+  font-weight: bold;
+  color: "blue";
 }
