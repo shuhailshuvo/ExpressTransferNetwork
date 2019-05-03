@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/ExpressTransferNetwork/static/media/cynthia-del-rio.9813593c.jpg"
   },
   {
-    "revision": "e925162acd3444ab1f4b",
+    "revision": "b1f4fd11c8267b1caba6",
     "url": "/ExpressTransferNetwork/static/css/main.5ee92822.chunk.css"
   },
   {
@@ -68,8 +68,8 @@ self.__precacheManifest = [
     "url": "/ExpressTransferNetwork/static/media/studio-5.ef5c30ea.jpg"
   },
   {
-    "revision": "e925162acd3444ab1f4b",
-    "url": "/ExpressTransferNetwork/static/js/main.e925162a.chunk.js"
+    "revision": "b1f4fd11c8267b1caba6",
+    "url": "/ExpressTransferNetwork/static/js/main.b1f4fd11.chunk.js"
   },
   {
     "revision": "c058841b1dd64e5f79c6348b24cfb78d",
@@ -132,7 +132,7 @@ self.__precacheManifest = [
     "url": "/ExpressTransferNetwork/static/media/landing-bg.20980b10.png"
   },
   {
-    "revision": "50f1351ca2b6d93a63aaa50b7e414248",
+    "revision": "9751fd1284fc06b84ba3103a60add2aa",
     "url": "/ExpressTransferNetwork/index.html"
   }
 ];
