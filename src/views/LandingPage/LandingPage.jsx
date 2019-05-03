@@ -41,6 +41,7 @@ import landingPageStyle from "assets/jss/material-kit-react/views/landingPage.js
 import ProductSection from "./Sections/ProductSection.jsx";
 import TeamSection from "./Sections/TeamSection.jsx";
 import WorkSection from "./Sections/WorkSection.jsx";
+import Summary from "./Sections/Summary.jsx";
 import loadingImg from "../../assets/img/loading.gif";
 const dashboardRoutes = [];
 
@@ -61,7 +62,9 @@ class LandingPage extends React.Component {
     withBags: false,
     action: undefined,
     error: false,
-    loading: false
+    loading: false,
+    showCars: false,
+    selectCar: 2
   };
   startLocation = location => {
     this.setState({
@@ -94,7 +97,10 @@ class LandingPage extends React.Component {
   passengers = number => {
     this.setState({ passengers: number, error: false });
   };
-
+  selectCar = type => {
+    console.log(type);
+    this.setState({ selectCar: type, showCars: false });
+  };
   bags = number => {
     this.setState({
       bags: number,
@@ -148,7 +154,7 @@ class LandingPage extends React.Component {
             error: false
           });
           setTimeout(() => {
-            this.props.history.push("/cars");
+            this.setState({ showCars: true });
           }, 3000);
         } else {
           this.setState({ error: true });
@@ -443,43 +449,67 @@ class LandingPage extends React.Component {
           }}
           {...rest}
         />
-        <Parallax filter image={require("assets/img/landing-bg.png")}>
-          <div className={classes.container}>
-            <GridContainer>
-              <GridItem xs={12} sm={12} md={4}>
-                <Card>
-                  {!this.state.loading && this.queryFormHeader()}
-                  {this.state.loading
-                    ? this.loading()
-                    : this.queryFormBody(classes)}
-                  {!this.state.loading && (
-                    <CardFooter>
-                      <GridItem>
-                        <Button
-                          fullWidth
-                          color={this.state.error ? "danger" : "info"}
-                          onClick={() => {
-                            this.getQuotes(this.state.action);
-                          }}
-                        >
-                          Get Quote
-                        </Button>
-                      </GridItem>
-                    </CardFooter>
-                  )}
-                </Card>
-              </GridItem>
-            </GridContainer>
+        {this.state.showCars && (
+          <div
+            className={classNames(classes.main, classes.mainRaised)}
+            style={{ marginTop: 100 }}
+          >
+            <div className={classes.container}>
+              <TeamSection selectMode={true} onSelect={this.selectCar} />
+            </div>
           </div>
-        </Parallax>
-        <div className={classNames(classes.main, classes.mainRaised)}>
-          <div className={classes.container}>
-            <ProductSection />
-            <TeamSection />
-            <WorkSection />
+        )}
+        {this.state.selectCar && (
+          <div
+            className={classNames(classes.main, classes.mainRaised)}
+            style={{ marginTop: 100 }}
+          >
+            <div className={classes.container}>
+              <Summary state={this.state} />
+            </div>
           </div>
-        </div>
-        <Footer />
+        )}
+        {!this.state.selectCar && !this.state.showCars && (
+          <React.Fragment>
+            <Parallax filter image={require("assets/img/landing-bg.png")}>
+              <div className={classes.container}>
+                <GridContainer>
+                  <GridItem xs={12} sm={12} md={4}>
+                    <Card>
+                      {!this.state.loading && this.queryFormHeader()}
+                      {this.state.loading
+                        ? this.loading()
+                        : this.queryFormBody(classes)}
+                      {!this.state.loading && (
+                        <CardFooter>
+                          <GridItem>
+                            <Button
+                              fullWidth
+                              color={this.state.error ? "danger" : "info"}
+                              onClick={() => {
+                                this.getQuotes(this.state.action);
+                              }}
+                            >
+                              Get Quote
+                            </Button>
+                          </GridItem>
+                        </CardFooter>
+                      )}
+                    </Card>
+                  </GridItem>
+                </GridContainer>
+              </div>
+            </Parallax>
+            <div className={classNames(classes.main, classes.mainRaised)}>
+              <div className={classes.container}>
+                <ProductSection />
+                <TeamSection />
+                <WorkSection />
+              </div>
+            </div>
+            <Footer />
+          </React.Fragment>
+        )}
       </div>
     );
   }
