@@ -64,7 +64,7 @@ class LandingPage extends React.Component {
     error: false,
     loading: false,
     showCars: false,
-    selectCar: 2
+    selectCar: null
   };
   startLocation = location => {
     this.setState({
@@ -98,7 +98,6 @@ class LandingPage extends React.Component {
     this.setState({ passengers: number, error: false });
   };
   selectCar = type => {
-    console.log(type);
     this.setState({ selectCar: type, showCars: false });
   };
   bags = number => {
