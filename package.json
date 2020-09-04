@@ -15,7 +15,7 @@
     "history": "^4.7.2",
     "material-ui-pickers": "^2.2.4",
     "moment": "^2.24.0",
-    "node-sass": "4.11.0",
+    "node-sass": "4.13.1",
     "nouislider": "13.1.0",
     "prop-types": "^15.7.1",
     "react": "16.8.1",
